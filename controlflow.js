@@ -17,52 +17,35 @@ let examples=[10,20,30,40,50,60];
 operateOnArray(examples)
 // Write a program that takes in the following array and use a 
 // while loop to iterate and break when the item is equal to the 
-// fourth index :let arrNum = [1,2,3,4,5,6,7,8,9];
+// fourth index :let arrNum = [1,2,3,4,5,6,7,8,9]; 
 
-// function breakLoop(){
-//     let arrNum = [1,2,3,4,5,6,7,8,9]; 
-//     let index=[0];
-//     while(index=[0],index++){
-
-    
-//     console.log(arrNum);
-        
-//     if (index<[5]) {    
-//     }
-//     break
-//     }
-//     console.log(arrNum);
-// }
-
-// breakLoop()
-
-// function breakLoop(){
-//     while(index<arrNum.length){
-//         if(index==4){
-//             break;
-//         }
-//     }
-//     return arrNum
-// }
-// let arrNum = [1,2,3,4,5,6,7,8,9];
-// console.log(breakLoop(arrNum));
+function breakLoop(){
+ const brokenLoop=arrNum.slice(0,5);
+    while(brokenLoop){
+        console.log(brokenLoop);
+        break;
+    }
+  }
+ let arrNum = [1,2,3,4,5,6,7,8,9];
+breakLoop()
 
 // Write a function that takes in a an array of strings and use a
 //  continue statement when the item is at the second index: 
 //  let fruits= ['apple','plum','banana','strawberries','kiwi']
 
 function fruitsArray(fruits){
-    for (let index=0; index<fruits.length; index++){
-        if (index==2) {
-            continue;
-            
-        }
+    let index=0;
+    while(index<4){
+        index++;
+        if(index/2===1)continue;
+         console.log(fruits[index]);
+        
     }
-    return fruits
 
 }
 let fruits= ['apple','plum','banana','strawberries','kiwi'];
-console.log(fruitsArray(fruits));
+fruitsArray(fruits)
+// console.log(fruitsArray(fruits));
 
 // Write a function that accepts an array of strings and 
 // console.logs each element using a for loop
@@ -78,3 +61,15 @@ stringsLoop()
 // Write a JavaScript function that takes a string as input and
 //  reverses it using a while loop. The function should return
 //  the reversed string.
+
+function reverseString(string){
+    let newString="";
+    let index= string.length-1;
+    while(index >=0){
+        newString+= string[index];
+        index--;
+    }
+    return newString;
+};
+const string="Kindergarten"
+console.log(reverseString(string));
